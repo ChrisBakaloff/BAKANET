@@ -16,39 +16,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1_5lpiSFo6j5dhrr6Z6RFd8Q" translatesAutoresizingMaskIntoConstraints="NO" id="Oyr-W0-RXC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1_5lpiSFo6j5dhrr6Z6RFd8Q" translatesAutoresizingMaskIntoConstraints="NO" id="Oyr-W0-RXC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BakaNet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a66-95-9Sz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BakaNet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a66-95-9Sz">
                                 <rect key="frame" x="36" y="81" width="342" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-bp-GrP">
-                                <rect key="frame" x="63" y="523" width="145" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Kdf-SY-nsP" kind="show" id="qUu-wY-BPk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36q-AO-0Yf">
-                                <rect key="frame" x="81" y="642" width="153" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="ZXv-Yo-a9x">
+                                <rect key="frame" x="128" y="503" width="158" height="195"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbO-bp-GrP">
+                                        <rect key="frame" x="0.0" y="0.0" width="158" height="66"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Kdf-SY-nsP" kind="show" id="qUu-wY-BPk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36q-AO-0Yf">
+                                        <rect key="frame" x="0.0" y="129" width="158" height="66"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oyr-W0-RXC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1JP-D7-Dre"/>
+                            <constraint firstItem="Oyr-W0-RXC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3nf-NV-447"/>
+                            <constraint firstItem="a66-95-9Sz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="6xY-ZF-xEc"/>
+                            <constraint firstItem="Oyr-W0-RXC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="G0C-pX-xfw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZXv-Yo-a9x" secondAttribute="bottom" constant="164" id="G2h-TJ-HnZ"/>
+                            <constraint firstItem="ZXv-Yo-a9x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VFv-ho-7i7"/>
+                            <constraint firstItem="ZXv-Yo-a9x" firstAttribute="top" secondItem="a66-95-9Sz" secondAttribute="bottom" constant="350" id="cFV-56-pqY"/>
+                            <constraint firstItem="a66-95-9Sz" firstAttribute="centerX" secondItem="Oyr-W0-RXC" secondAttribute="centerX" id="diP-4T-ppq"/>
+                            <constraint firstItem="a66-95-9Sz" firstAttribute="centerX" secondItem="ZXv-Yo-a9x" secondAttribute="centerX" id="gk5-9x-dIc"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="LoginButton" destination="dbO-bp-GrP" id="hcu-w1-tu9"/>
@@ -142,22 +154,37 @@
             </objects>
             <point key="canvasLocation" x="753.62318840579712" y="97.767857142857139"/>
         </scene>
-        <!--Item-->
+        <!--Main Page View Controller-->
         <scene sceneID="zri-Kq-qVK">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="cSa-jM-Hnb" customClass="MainPageViewController" customModule="BAKANET" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="cSa-jM-Hnb" customClass="MainPageViewController" customModule="BAKANET" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HyE-9n-ocz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6p-dn-Uyi">
+                                <rect key="frame" x="171" y="20" width="72.5" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sXs-dg-5aT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.28028476750186859" green="0.55618686868686873" blue="0.33332906360311015" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="W6p-dn-Uyi" firstAttribute="centerX" secondItem="HyE-9n-ocz" secondAttribute="centerX" id="DhN-S7-miV"/>
+                            <constraint firstItem="W6p-dn-Uyi" firstAttribute="top" secondItem="sXs-dg-5aT" secondAttribute="top" constant="20" id="VN3-R1-hSy"/>
+                            <constraint firstItem="sXs-dg-5aT" firstAttribute="bottom" secondItem="W6p-dn-Uyi" secondAttribute="bottom" constant="667" id="g1I-yN-5cU"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Z77-8K-7ka"/>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-home (2)" selectedImage="icons8-home (2)" id="Z77-8K-7ka">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="ELu-ea-fRE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBz-hx-RYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="137"/>
+            <point key="canvasLocation" x="2320" y="785"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="39a-3V-ykh">
@@ -171,11 +198,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="cSa-jM-Hnb" kind="relationship" relationship="viewControllers" id="Khy-tI-hYk"/>
+                        <segue destination="sYG-tt-BIh" kind="relationship" relationship="viewControllers" id="gDO-fo-mRt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyN-7k-jvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1694" y="137"/>
+            <point key="canvasLocation" x="1861" y="98"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JFL-YP-RFD">
@@ -218,9 +246,43 @@
             </objects>
             <point key="canvasLocation" x="754" y="785"/>
         </scene>
+        <!--Main Page View Controller-->
+        <scene sceneID="8uf-kr-0La">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="sYG-tt-BIh" customClass="MainPageViewController" customModule="BAKANET" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="am2-1K-KBi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR0-0r-lmk">
+                                <rect key="frame" x="125.5" y="20" width="163" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VLg-ZQ-JEb"/>
+                        <color key="backgroundColor" red="0.28028476749999998" green="0.5561868687" blue="0.33332906359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="uR0-0r-lmk" firstAttribute="top" secondItem="VLg-ZQ-JEb" secondAttribute="top" constant="20" id="Fdz-ZA-fPS"/>
+                            <constraint firstItem="VLg-ZQ-JEb" firstAttribute="bottom" secondItem="uR0-0r-lmk" secondAttribute="bottom" constant="667" id="Q3M-ae-q8Q"/>
+                            <constraint firstItem="uR0-0r-lmk" firstAttribute="centerX" secondItem="am2-1K-KBi" secondAttribute="centerX" id="b8y-MD-fqa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="profile_icon" selectedImage="profile_icon" id="VZp-R1-RHU">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="FSD-Ba-fDV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkH-mX-Lta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1564" y="785"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1_5lpiSFo6j5dhrr6Z6RFd8Q" width="4000" height="3000"/>
+        <image name="icons8-home (2)" width="30" height="30"/>
+        <image name="profile_icon" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
