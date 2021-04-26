@@ -14,6 +14,7 @@
 		3EAC8CBE263652D900F3139D /* BAKANET.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC8CBC263652D900F3139D /* BAKANET.xcdatamodeld */; };
 		3EAC8CC0263652DA00F3139D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC8CBF263652DA00F3139D /* Assets.xcassets */; };
 		3EAC8CC3263652DA00F3139D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC8CC1263652DA00F3139D /* LaunchScreen.storyboard */; };
+		3EAC8CCC263657F900F3139D /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC8CCB263657F900F3139D /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3EAC8CBF263652DA00F3139D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EAC8CC2263652DA00F3139D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EAC8CC4263652DA00F3139D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EAC8CCB263657F900F3139D /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				3EAC8CB5263652D900F3139D /* SceneDelegate.swift */,
 				3EAC8CB7263652D900F3139D /* ViewController.swift */,
 				3EAC8CB9263652D900F3139D /* Main.storyboard */,
+				3EAC8CCB263657F900F3139D /* MainPageViewController.swift */,
 				3EAC8CBF263652DA00F3139D /* Assets.xcassets */,
 				3EAC8CC1263652DA00F3139D /* LaunchScreen.storyboard */,
 				3EAC8CC4263652DA00F3139D /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EAC8CCC263657F900F3139D /* MainPageViewController.swift in Sources */,
 				3EAC8CB8263652D900F3139D /* ViewController.swift in Sources */,
 				3EAC8CB4263652D900F3139D /* AppDelegate.swift in Sources */,
 				3EAC8CBE263652D900F3139D /* BAKANET.xcdatamodeld in Sources */,
@@ -297,7 +301,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "chris-bakaloff.BAKANET";
+				PRODUCT_BUNDLE_IDENTIFIER = "chris-bakaloff.BakaNetwork";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,7 +320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "chris-bakaloff.BAKANET";
+				PRODUCT_BUNDLE_IDENTIFIER = "chris-bakaloff.BakaNetwork";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
