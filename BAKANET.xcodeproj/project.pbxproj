@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3E4D9A392644B091002E4546 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D9A382644B091002E4546 /* Posts.swift */; };
 		3E4D9A3B2644B2C6002E4546 /* UserSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D9A3A2644B2C6002E4546 /* UserSettingsVC.swift */; };
 		3E88258F2645EA9800B7BA30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E88258E2645EA9800B7BA30 /* GoogleService-Info.plist */; };
+		3E8825912645EF1700B7BA30 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8825902645EF1700B7BA30 /* FirebaseAuthManager.swift */; };
 		3E8F976A2645B72300B6C850 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F97692645B72300B6C850 /* AddPostVC.swift */; };
 		3EAC8CB4263652D900F3139D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC8CB3263652D900F3139D /* AppDelegate.swift */; };
 		3EAC8CB6263652D900F3139D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC8CB5263652D900F3139D /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 		3EAC8CC0263652DA00F3139D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC8CBF263652DA00F3139D /* Assets.xcassets */; };
 		3EAC8CC3263652DA00F3139D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC8CC1263652DA00F3139D /* LaunchScreen.storyboard */; };
 		3EAC8CCC263657F900F3139D /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC8CCB263657F900F3139D /* MainPageViewController.swift */; };
+		3EEDC4D62646E2E9009C63F3 /* RoundedBakaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDC4D52646E2E9009C63F3 /* RoundedBakaButton.swift */; };
 		9C05B6004043CF66567613AA /* Pods_BAKANET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A427468037224E9B5BB061 /* Pods_BAKANET.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,7 @@
 		3E4D9A382644B091002E4546 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		3E4D9A3A2644B2C6002E4546 /* UserSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsVC.swift; sourceTree = "<group>"; };
 		3E88258E2645EA9800B7BA30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E8825902645EF1700B7BA30 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		3E8F97692645B72300B6C850 /* AddPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 		3EAC8CB0263652D900F3139D /* BAKANET.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BAKANET.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAC8CB3263652D900F3139D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		3EAC8CC2263652DA00F3139D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EAC8CC4263652DA00F3139D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EAC8CCB263657F900F3139D /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		3EEDC4D52646E2E9009C63F3 /* RoundedBakaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBakaButton.swift; sourceTree = "<group>"; };
 		84A427468037224E9B5BB061 /* Pods_BAKANET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BAKANET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E3614A79F0BE8BD8E4DA91 /* Pods-BAKANET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAKANET.release.xcconfig"; path = "Target Support Files/Pods-BAKANET/Pods-BAKANET.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				3E4D9A382644B091002E4546 /* Posts.swift */,
+				3E8825902645EF1700B7BA30 /* FirebaseAuthManager.swift */,
 			);
 			path = "Support Classes";
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 		3EAC8CB2263652D900F3139D /* BAKANET */ = {
 			isa = PBXGroup;
 			children = (
+				3EEDC4D42646E20E009C63F3 /* Custom Elements */,
 				3E88258E2645EA9800B7BA30 /* GoogleService-Info.plist */,
 				3E8F97682645B21700B6C850 /* Support Classes */,
 				3E8F97672645B13200B6C850 /* ViewControllers */,
@@ -116,13 +122,20 @@
 			path = BAKANET;
 			sourceTree = "<group>";
 		};
+		3EEDC4D42646E20E009C63F3 /* Custom Elements */ = {
+			isa = PBXGroup;
+			children = (
+				3EEDC4D52646E2E9009C63F3 /* RoundedBakaButton.swift */,
+			);
+			path = "Custom Elements";
+			sourceTree = "<group>";
+		};
 		5344299233EFBEB5D3459CA1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				38A4619754C754A6814651A4 /* Pods-BAKANET.debug.xcconfig */,
 				C5E3614A79F0BE8BD8E4DA91 /* Pods-BAKANET.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -244,10 +257,12 @@
 				3E4D9A3B2644B2C6002E4546 /* UserSettingsVC.swift in Sources */,
 				3EAC8CCC263657F900F3139D /* MainPageViewController.swift in Sources */,
 				3E8F976A2645B72300B6C850 /* AddPostVC.swift in Sources */,
+				3E8825912645EF1700B7BA30 /* FirebaseAuthManager.swift in Sources */,
 				3E4D9A392644B091002E4546 /* Posts.swift in Sources */,
 				3EAC8CB8263652D900F3139D /* ViewController.swift in Sources */,
 				3EAC8CB4263652D900F3139D /* AppDelegate.swift in Sources */,
 				3EAC8CBE263652D900F3139D /* BAKANET.xcdatamodeld in Sources */,
+				3EEDC4D62646E2E9009C63F3 /* RoundedBakaButton.swift in Sources */,
 				3EAC8CB6263652D900F3139D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
