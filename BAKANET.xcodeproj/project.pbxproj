@@ -21,6 +21,8 @@
 		3EAC8CC3263652DA00F3139D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EAC8CC1263652DA00F3139D /* LaunchScreen.storyboard */; };
 		3EAC8CCC263657F900F3139D /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC8CCB263657F900F3139D /* MainPageViewController.swift */; };
 		3EEDC4D62646E2E9009C63F3 /* RoundedBakaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDC4D52646E2E9009C63F3 /* RoundedBakaButton.swift */; };
+		3EEDC4D826472C1D009C63F3 /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDC4D726472C1D009C63F3 /* LoginPageVC.swift */; };
+		3EEDC4DA26473C39009C63F3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDC4D926473C39009C63F3 /* FirstViewController.swift */; };
 		9C05B6004043CF66567613AA /* Pods_BAKANET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A427468037224E9B5BB061 /* Pods_BAKANET.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		3EAC8CC4263652DA00F3139D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EAC8CCB263657F900F3139D /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		3EEDC4D52646E2E9009C63F3 /* RoundedBakaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBakaButton.swift; sourceTree = "<group>"; };
+		3EEDC4D726472C1D009C63F3 /* LoginPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
+		3EEDC4D926473C39009C63F3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		84A427468037224E9B5BB061 /* Pods_BAKANET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BAKANET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E3614A79F0BE8BD8E4DA91 /* Pods-BAKANET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAKANET.release.xcconfig"; path = "Target Support Files/Pods-BAKANET/Pods-BAKANET.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +77,8 @@
 				3EAC8CB7263652D900F3139D /* ViewController.swift */,
 				3E4D9A3A2644B2C6002E4546 /* UserSettingsVC.swift */,
 				3E8F97692645B72300B6C850 /* AddPostVC.swift */,
+				3EEDC4D726472C1D009C63F3 /* LoginPageVC.swift */,
+				3EEDC4D926473C39009C63F3 /* FirstViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -256,6 +262,8 @@
 			files = (
 				3E4D9A3B2644B2C6002E4546 /* UserSettingsVC.swift in Sources */,
 				3EAC8CCC263657F900F3139D /* MainPageViewController.swift in Sources */,
+				3EEDC4D826472C1D009C63F3 /* LoginPageVC.swift in Sources */,
+				3EEDC4DA26473C39009C63F3 /* FirstViewController.swift in Sources */,
 				3E8F976A2645B72300B6C850 /* AddPostVC.swift in Sources */,
 				3E8825912645EF1700B7BA30 /* FirebaseAuthManager.swift in Sources */,
 				3E4D9A392644B091002E4546 /* Posts.swift in Sources */,
