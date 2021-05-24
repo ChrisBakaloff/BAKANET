@@ -67,7 +67,7 @@ class ViewController: UIViewController {
                 }else{
                     print("An error occured")
                 }
-                sel.performSegue(withIdentifier: "login.to.main", sender: nil)
+                sel.performSegue(withIdentifier: "register.to.login", sender: nil)
             }
         }
     }

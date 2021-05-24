@@ -19,51 +19,35 @@ class UserPostCell: UITableViewCell {
 
 class UserSettingsVC: UIViewController, UITableViewDelegate , UITableViewDataSource{
 
-
+    var userPosts = [Posts]()
     @IBOutlet weak var mainUserNameTextField: UILabel!
     @IBOutlet weak var userTableView: UITableView!
     let fir = Firestore.firestore()
     let auth = FirebaseAuth.Auth.auth()
     
     
-    private var service: PostService?
-    
-    private var allposts = [appPosts](){
-        didSet{
-            DispatchQueue.main.async {
-                self.userposts = self.allposts
-            }
-        }
-    }
-    private var  userposts = [appPosts](){
-        didSet{
-            DispatchQueue.main.async {
-                self.userTableView.reloadData()
-            }
-        }
-    }
 
-    
-    func loadData(){
-        service =  PostService()
-        service?.get(collectionID: "Posts")  {posts in
-            self.allposts = self.userposts
-            }
-    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userTableView.dataSource = self
         userTableView.delegate = self
-        loadData()
+//        loadData()
         if(Auth.auth().currentUser != nil){
             DispatchQueue.main.async {
                 self.getUserData()
             }
         }
-        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.dataLoad {
+            self.userTableView.reloadData()
+        }
+    }
+    
+    
     
     
     //MARK: IBAction functions
@@ -75,7 +59,6 @@ class UserSettingsVC: UIViewController, UITableViewDelegate , UITableViewDataSou
             print("User already logged out")
         }
     }
-    
     //MARK: Functions
     func getUserData(){
         fir.collection("Users").document(auth.currentUser!.uid).getDocument(completion: {(document, error) in
@@ -87,22 +70,41 @@ class UserSettingsVC: UIViewController, UITableViewDelegate , UITableViewDataSou
         })
     }
     
+    
+    func dataLoad(completed: @escaping () -> ()){
+        fir.collection("Posts").whereField("posted_by", isEqualTo: auth.currentUser?.uid).addSnapshotListener {(querySnapshot , error) in
+            guard error == nil else{
+                print("An error occured")
+                return completed()
+             }
+            self.userPosts = []
+//            for document in querySnapshot!.documents{
+//                print(document["content"])
+            self.userPosts = Posts.build(from: querySnapshot!.documents)
+//            print(self.userPosts[0].title + " " + self.userPosts[0].content)
+            
+//            }
+            completed()
+        }
+    }
+    
+    
+
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userposts.count
+        if userPosts.count == 0{
+            self.userTableView.setEmptyMessage("Nothing to show here D:")
+        }else{
+            self.userTableView.restore()
+        }
+        return userPosts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = userTableView.dequeueReusableCell(withIdentifier: "user_table_cell", for: indexPath) as! UserPostCell
-//        
-        cell.cellTitleLabel?.text = userposts[indexPath.row].postHeading
-        cell.cellContentLabel?.text = userposts[indexPath.row].postHeading
+        cell.cellTitleLabel?.text = userPosts[indexPath.row].title
+        cell.cellContentLabel?.text = userPosts[indexPath.row].content
         cell.cellLikesLabel?.text = "12"
-        cell.cellTitleLabel.layer.cornerRadius = 10
-        cell.cellTitleLabel.clipsToBounds = true
-        cell.cellTitleLabel.backgroundColor = UIColor.white.withAlphaComponent(0.4)
-//        cell.postContentLabel?.text = posts[indexPath.row].content
-//        cell.likesLabel?.text = String(posts[indexPath.row].likes)
-        
         return cell
     }
     
@@ -110,22 +112,8 @@ class UserSettingsVC: UIViewController, UITableViewDelegate , UITableViewDataSou
         return 200
     }
     
-
-
-    
-    
-    
-
-    
-//    func getPostsForUser(){
-//        let postRef = fir.collection("Posts")
-//        var posts = postRef.whereField("posted_by", isEqualTo: auth.currentUser?.uid).getDocuments(completion: {(document, error) in
-//            if let document = document , !document.isEmpty {
-//
-//            }
-//        })
-//
-//    }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 
 }

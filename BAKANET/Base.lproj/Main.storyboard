@@ -117,7 +117,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2gB-cj-Mqo">
                                         <rect key="frame" x="0.0" y="236.33333333333334" width="368" height="34.000000000000028"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -497,11 +497,12 @@
                         <outlet property="lastNameTextField" destination="Ujl-Oe-bnX" id="hro-NY-vdl"/>
                         <outlet property="passwordTextField" destination="aux-8T-ldr" id="4U0-nz-HU9"/>
                         <outlet property="repeatPasswordTextField" destination="51t-5h-ZwF" id="KQs-FJ-Jrq"/>
+                        <segue destination="Kdf-SY-nsP" kind="show" identifier="register.to.login" id="dH1-Z0-UpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLt-pF-cD9" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-880" y="100"/>
+            <point key="canvasLocation" x="-840" y="56"/>
         </scene>
         <!--User SettingsVC-->
         <scene sceneID="8uf-kr-0La">
@@ -584,7 +585,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.28028476749999998" green="0.5561868687" blue="0.33332906359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="cellContentLabel" destination="B8r-kF-COM" id="QWw-Hw-kah"/>
                                             <outlet property="cellLikesLabel" destination="lD5-D6-pQa" id="O7y-5Z-dgB"/>
+                                            <outlet property="cellTitleLabel" destination="86F-v5-dzX" id="kNK-RH-Wrz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -629,6 +632,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="P5k-V4-yVc"/>
+        <segue reference="dH1-Z0-UpW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1_5lpiSFo6j5dhrr6Z6RFd8Q" width="4000" height="3000"/>

@@ -84,7 +84,7 @@ class MainPageViewController: UIViewController , UITableViewDelegate , UITableVi
 
 //MARK: TableView Functions
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
         return posts.count
     }
     

@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseFirestore
+
 class Posts {
     public var title:String = ""
     public var content:String = ""
@@ -18,8 +20,14 @@ class Posts {
         self.likes = likes
     }
         
-    func getLikes()->Int{
-        return self.likes
+    
+    static func build(from documents:[QueryDocumentSnapshot])->[Posts]{
+        var posts = [Posts]()
+        for document in documents{
+            posts.append(Posts(document["name"] as! String? ?? "" ,
+                               document["content"] as! String? ?? "" ,  12))
+        }
+        return posts
     }
     
 }

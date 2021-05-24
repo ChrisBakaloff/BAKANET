@@ -13,7 +13,7 @@ class LoginPageVC: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
@@ -40,6 +40,10 @@ class LoginPageVC: UIViewController {
             return
         }
     }
+    
+    @objc func doneButtonTapped() {
+           view.endEditing(true)
+       }
     
 
     /*

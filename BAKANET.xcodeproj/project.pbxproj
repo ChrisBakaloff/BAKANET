@@ -11,6 +11,7 @@
 		3E4D9A3B2644B2C6002E4546 /* UserSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D9A3A2644B2C6002E4546 /* UserSettingsVC.swift */; };
 		3E63CD13264B2CD300A6E590 /* postsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E63CD12264B2CD300A6E590 /* postsStruct.swift */; };
 		3E63CD17264B2E2A00A6E590 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E63CD16264B2E2A00A6E590 /* PostsService.swift */; };
+		3E77B224265C2CB00011528E /* Baka_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E77B223265C2CB00011528E /* Baka_Extensions.swift */; };
 		3E88258F2645EA9800B7BA30 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E88258E2645EA9800B7BA30 /* GoogleService-Info.plist */; };
 		3E8825912645EF1700B7BA30 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8825902645EF1700B7BA30 /* FirebaseAuthManager.swift */; };
 		3E8F976A2645B72300B6C850 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8F97692645B72300B6C850 /* AddPostVC.swift */; };
@@ -34,6 +35,7 @@
 		3E4D9A3A2644B2C6002E4546 /* UserSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsVC.swift; sourceTree = "<group>"; };
 		3E63CD12264B2CD300A6E590 /* postsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postsStruct.swift; sourceTree = "<group>"; };
 		3E63CD16264B2E2A00A6E590 /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
+		3E77B223265C2CB00011528E /* Baka_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baka_Extensions.swift; sourceTree = "<group>"; };
 		3E88258E2645EA9800B7BA30 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3E8825902645EF1700B7BA30 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		3E8F97692645B72300B6C850 /* AddPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		3E77B222265C2C9B0011528E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3E77B223265C2CB00011528E /* Baka_Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3E8F97672645B13200B6C850 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		3EAC8CB2263652D900F3139D /* BAKANET */ = {
 			isa = PBXGroup;
 			children = (
+				3E77B222265C2C9B0011528E /* Extensions */,
 				3E63CD14264B2E1400A6E590 /* Services */,
 				3EEDC4D42646E20E009C63F3 /* Custom Elements */,
 				3E88258E2645EA9800B7BA30 /* GoogleService-Info.plist */,
@@ -281,6 +292,7 @@
 				3EEDC4DA26473C39009C63F3 /* FirstViewController.swift in Sources */,
 				3E8F976A2645B72300B6C850 /* AddPostVC.swift in Sources */,
 				3E8825912645EF1700B7BA30 /* FirebaseAuthManager.swift in Sources */,
+				3E77B224265C2CB00011528E /* Baka_Extensions.swift in Sources */,
 				3E4D9A392644B091002E4546 /* Posts.swift in Sources */,
 				3EAC8CB8263652D900F3139D /* ViewController.swift in Sources */,
 				3E63CD17264B2E2A00A6E590 /* PostsService.swift in Sources */,
