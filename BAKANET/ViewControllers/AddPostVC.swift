@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class AddPostVC: UIViewController {
+    
+    private var db = Firestore.firestore()
 
     @IBOutlet weak var goBackButton: UIButton!
     @IBOutlet weak var goNextButton: UIButton!
     @IBOutlet weak var postHeadingTextField: UITextField!
     @IBOutlet weak var postContentTextField: UITextView!
+    let userid = Auth.auth().currentUser?.uid
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         goBackButton.clipsToBounds = true
@@ -25,27 +32,20 @@ class AddPostVC: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        print("prepare hit")
-//        if (postHeadingTextField.text != nil && postContentTextField.text != nil){
-//            let postTitle = postHeadingTextField.text
-//            let postContent = postContentTextField.text
-//            posts.insert(Posts(postTitle!, postContent!, 0), at: 0);
-//            
-//        }
-//        else{
-//            return
-//        }
-//    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func randomString() -> String {
+      let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+      return String((0..<12).map{ _ in letters.randomElement()! })
     }
-    */
 
+    func addPostToDb(){
+        db.collection("Posts").document(randomString()).setData([
+            "content": postHeadingTextField.text ?? "",
+            "name": postContentTextField.text ?? "",
+            "posted_by": userid ?? ""
+        ])
+        print(userid!)
+    }
+    @IBAction func onNextClick(_ sender: UIButton) {
+        addPostToDb()
+    }
 }

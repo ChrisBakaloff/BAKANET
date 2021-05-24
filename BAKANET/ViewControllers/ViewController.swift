@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 func checkPasswordsMatch(firstPassword textField:UITextField , secondPassword repeatTextField:UITextField)->Bool{
     if (textField.text != repeatTextField.text){
@@ -24,13 +26,15 @@ func checkEmailFormat(email adress:String)->Bool{
 
 class ViewController: UIViewController {
 
-  
+    
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var LogoLabel: UILabel!
     @IBOutlet weak var RegisterButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     
     
     
@@ -50,16 +54,20 @@ class ViewController: UIViewController {
         if let email = emailTextField.text , let password = passwordTextField.text{
             signUpManager.createUser(email: email, password: password) {[weak self] (success) in
                 guard let sel = self else {return}
-                var message: String = ""
+                
                 if (success){
-                    message = "User was successfuly created"
-                    //DO SOMETHING HERE
+                    print("User was successfuly created")
+                    let docData: [String: Any] = [
+                        "fname": self?.firstNameTextField.text! ?? "" ,
+                        "lname": self?.lastNameTextField.text!  ?? ""
+                    ]
+                    let db = Firestore.firestore()
+                    let userId = Auth.auth().currentUser?.uid
+                    db.collection("Users").document(userId!).setData(docData)
                 }else{
-                    message = "An error occured"
+                    print("An error occured")
                 }
-                let alertControl = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-                alertControl.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-                sel.present(alertControl, animated: true, completion: nil)
+                sel.performSegue(withIdentifier: "login.to.main", sender: nil)
             }
         }
     }

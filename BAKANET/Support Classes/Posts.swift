@@ -10,13 +10,14 @@ class Posts {
     public var title:String = ""
     public var content:String = ""
     public var likes:Int = 0
+    public var posted_by:String?
     
     init(_ title:String , _ content:String , _ likes:Int) {
         self.content = content
         self.title = title
         self.likes = likes
     }
-    
+        
     func getLikes()->Int{
         return self.likes
     }
