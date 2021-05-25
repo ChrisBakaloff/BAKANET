@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E4D9A392644B091002E4546 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D9A382644B091002E4546 /* Posts.swift */; };
 		3E4D9A3B2644B2C6002E4546 /* UserSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D9A3A2644B2C6002E4546 /* UserSettingsVC.swift */; };
+		3E56894C265D261900220A3D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E56894B265D261900220A3D /* Message.swift */; };
+		3E56894E265D262700220A3D /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E56894D265D262700220A3D /* Chat.swift */; };
 		3E63CD13264B2CD300A6E590 /* postsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E63CD12264B2CD300A6E590 /* postsStruct.swift */; };
 		3E63CD17264B2E2A00A6E590 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E63CD16264B2E2A00A6E590 /* PostsService.swift */; };
 		3E77B224265C2CB00011528E /* Baka_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E77B223265C2CB00011528E /* Baka_Extensions.swift */; };
@@ -26,6 +28,7 @@
 		3EEDC4D62646E2E9009C63F3 /* RoundedBakaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDC4D52646E2E9009C63F3 /* RoundedBakaButton.swift */; };
 		3EEDC4D826472C1D009C63F3 /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDC4D726472C1D009C63F3 /* LoginPageVC.swift */; };
 		3EEDC4DA26473C39009C63F3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEDC4D926473C39009C63F3 /* FirstViewController.swift */; };
+		3EF2CED2265D20FB00AD8300 /* BakaChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2CED1265D20FB00AD8300 /* BakaChatVC.swift */; };
 		9C05B6004043CF66567613AA /* Pods_BAKANET.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A427468037224E9B5BB061 /* Pods_BAKANET.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,8 @@
 		38A4619754C754A6814651A4 /* Pods-BAKANET.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAKANET.debug.xcconfig"; path = "Target Support Files/Pods-BAKANET/Pods-BAKANET.debug.xcconfig"; sourceTree = "<group>"; };
 		3E4D9A382644B091002E4546 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		3E4D9A3A2644B2C6002E4546 /* UserSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsVC.swift; sourceTree = "<group>"; };
+		3E56894B265D261900220A3D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3E56894D265D262700220A3D /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		3E63CD12264B2CD300A6E590 /* postsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postsStruct.swift; sourceTree = "<group>"; };
 		3E63CD16264B2E2A00A6E590 /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		3E77B223265C2CB00011528E /* Baka_Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Baka_Extensions.swift; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 		3EEDC4D52646E2E9009C63F3 /* RoundedBakaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBakaButton.swift; sourceTree = "<group>"; };
 		3EEDC4D726472C1D009C63F3 /* LoginPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
 		3EEDC4D926473C39009C63F3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		3EF2CED1265D20FB00AD8300 /* BakaChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakaChatVC.swift; sourceTree = "<group>"; };
 		84A427468037224E9B5BB061 /* Pods_BAKANET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BAKANET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E3614A79F0BE8BD8E4DA91 /* Pods-BAKANET.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BAKANET.release.xcconfig"; path = "Target Support Files/Pods-BAKANET/Pods-BAKANET.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +107,7 @@
 				3E8F97692645B72300B6C850 /* AddPostVC.swift */,
 				3EEDC4D726472C1D009C63F3 /* LoginPageVC.swift */,
 				3EEDC4D926473C39009C63F3 /* FirstViewController.swift */,
+				3EF2CED1265D20FB00AD8300 /* BakaChatVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +118,8 @@
 				3E4D9A382644B091002E4546 /* Posts.swift */,
 				3E8825902645EF1700B7BA30 /* FirebaseAuthManager.swift */,
 				3E63CD12264B2CD300A6E590 /* postsStruct.swift */,
+				3E56894B265D261900220A3D /* Message.swift */,
+				3E56894D265D262700220A3D /* Chat.swift */,
 			);
 			path = "Support Classes";
 			sourceTree = "<group>";
@@ -288,6 +297,8 @@
 				3E63CD13264B2CD300A6E590 /* postsStruct.swift in Sources */,
 				3E4D9A3B2644B2C6002E4546 /* UserSettingsVC.swift in Sources */,
 				3EAC8CCC263657F900F3139D /* MainPageViewController.swift in Sources */,
+				3E56894C265D261900220A3D /* Message.swift in Sources */,
+				3EF2CED2265D20FB00AD8300 /* BakaChatVC.swift in Sources */,
 				3EEDC4D826472C1D009C63F3 /* LoginPageVC.swift in Sources */,
 				3EEDC4DA26473C39009C63F3 /* FirstViewController.swift in Sources */,
 				3E8F976A2645B72300B6C850 /* AddPostVC.swift in Sources */,
@@ -296,6 +307,7 @@
 				3E4D9A392644B091002E4546 /* Posts.swift in Sources */,
 				3EAC8CB8263652D900F3139D /* ViewController.swift in Sources */,
 				3E63CD17264B2E2A00A6E590 /* PostsService.swift in Sources */,
+				3E56894E265D262700220A3D /* Chat.swift in Sources */,
 				3EAC8CB4263652D900F3139D /* AppDelegate.swift in Sources */,
 				3EAC8CBE263652D900F3139D /* BAKANET.xcdatamodeld in Sources */,
 				3EEDC4D62646E2E9009C63F3 /* RoundedBakaButton.swift in Sources */,

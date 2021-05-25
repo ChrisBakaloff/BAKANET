@@ -168,7 +168,29 @@
             </objects>
             <point key="canvasLocation" x="-104" y="-350"/>
         </scene>
-        <!--Main Page View Controller-->
+        <!--Chat-->
+        <scene sceneID="MTQ-ct-bFc">
+            <objects>
+                <viewController storyboardIdentifier="BakaChatVC" modalPresentationStyle="fullScreen" id="caB-hs-C5c" customClass="BakaChatVC" customModule="BAKANET" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XJX-5A-kT7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ovt-8u-xmx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vvg-Jt-83N">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" selectedImage="text.bubble" catalog="system" springLoaded="YES" id="JAb-4S-ehu">
+                        <imageReference key="image" image="text.bubble" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="Meb-Pu-dCP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sba-sg-G2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721" y="853"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="zri-Kq-qVK">
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="cSa-jM-Hnb" customClass="MainPageViewController" customModule="BAKANET" customModuleProvider="target" sceneMemberID="viewController">
@@ -273,7 +295,7 @@
                             <constraint firstItem="W6p-dn-Uyi" firstAttribute="top" secondItem="gNT-Xd-pnk" secondAttribute="bottom" constant="16" id="jau-ai-S2y"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icons8-home (2)" selectedImage="icons8-home (2)" id="Z77-8K-7ka">
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-home (2)" selectedImage="icons8-home (2)" id="Z77-8K-7ka">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="ELu-ea-fRE"/>
@@ -284,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBz-hx-RYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1658" y="827"/>
+            <point key="canvasLocation" x="2616" y="827"/>
         </scene>
         <!--Add PostVC-->
         <scene sceneID="oUf-SH-Qyh">
@@ -391,7 +413,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AzR-Zr-yJd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="w94-9b-Kqs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="826"/>
+            <point key="canvasLocation" x="3336" y="827"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="39a-3V-ykh">
@@ -402,6 +424,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemTealColor"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="cSa-jM-Hnb" kind="relationship" relationship="viewControllers" id="Khy-tI-hYk"/>
@@ -410,7 +435,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyN-7k-jvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="68"/>
+            <point key="canvasLocation" x="929" y="56"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JFL-YP-RFD">
@@ -504,7 +529,7 @@
             </objects>
             <point key="canvasLocation" x="-840" y="56"/>
         </scene>
-        <!--User SettingsVC-->
+        <!--Profile-->
         <scene sceneID="8uf-kr-0La">
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="sYG-tt-BIh" customClass="UserSettingsVC" customModule="BAKANET" customModuleProvider="target" sceneMemberID="viewController">
@@ -598,6 +623,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Iy-hd-a6e">
+                                <rect key="frame" x="337" y="74" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chat"/>
+                                <connections>
+                                    <segue destination="caB-hs-C5c" kind="show" id="ncn-dm-6Wa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28028476749999998" green="0.5561868687" blue="0.33332906359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -615,7 +648,7 @@
                             <constraint firstItem="lEX-30-i3I" firstAttribute="top" secondItem="4nt-Bt-4zb" secondAttribute="bottom" constant="16" id="yCv-2G-spz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="profile_icon" selectedImage="profile_icon" id="VZp-R1-RHU">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_icon" selectedImage="profile_icon" id="VZp-R1-RHU">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="FSD-Ba-fDV"/>
@@ -641,11 +674,15 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profile_icon" width="30" height="30"/>
+        <image name="text.bubble" catalog="system" width="128" height="110"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
